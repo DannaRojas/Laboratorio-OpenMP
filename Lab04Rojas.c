@@ -1,18 +1,22 @@
-/**************************************************
-*       Pontificia Universidad Javeriana          *
-*               ----------=----------             *
-*                                                 *
-* Autor: Danna Gabriela Rojas Bernal              *
-* Fecha: 6 noviembre de 2025                        *
-* Docente: J. Corredor
-* Materia: Sistemas Operativos                             *
-* Tema :Introducción a OpenMP
-*Descripcion: 
-***************************************************/
+/*****************************************************
+*       Pontificia Universidad Javeriana             *
+*               ----------=----------                *
+*                                                    *
+* Autor: Danna Gabriela Rojas Bernal                 *
+* Fecha: 6 noviembre de 2025                         *
+* Docente: J. Corredor                               *
+* Materia: Sistemas Operativos                       *
+* Tema :Introducción a OpenMP                        *
+* Descripcion: El programa semuestra el uso de OpenMP*
+* y la forma en que las variables privadas afectan el*
+* comportamientodentro de la región paralela         *
+******************************************************/
+//librerias
 #include <omp.h>
 #include <stdio.h>
 #include <stdlib.h>
 
+//programa principal
 int main(){
     int i;
     const int N = 1000;
