@@ -1,14 +1,17 @@
-/**************************************************
-*       Pontificia Universidad Javeriana          *
-*               ----------=----------             *
-*                                                 *
-* Autor: Danna Gabriela Rojas Bernal              *
-* Fecha: 6 noviembre de 2025                        *
-* Docente: J. Corredor
-* Materia: Sistemas Operativos                             *
-* Tema :Introducción a OpenMP
-*Descripcion: 
-***************************************************/
+/*****************************************************
+*       Pontificia Universidad Javeriana             *
+*               ----------=----------                *
+*                                                    *
+* Autor: Danna Gabriela Rojas Bernal                 *
+* Fecha: 6 noviembre de 2025                         *
+* Docente: J. Corredor                               *
+* Materia: Sistemas Operativos                       *
+* Tema :Introducción a OpenMP                        *
+* Descripcion: El programa semuestra el uso de OpenMP*
+* y la forma en que las variables privadas afectan el*
+* comportamientodentro de la región paralela         *
+******************************************************/
+//liberias 
 #include <omp.h> 
 #include <stdio.h>
 #include <stdlib.h>
@@ -19,6 +22,7 @@ int main(){
     int a = 50;
     int b = 0;
 
+    // hace que cada hilo tenga su propia copia de 'a' independiente del valor original
     #pragma omp parallel for private(i) private(a)
     for (i = 0; i < N; i++){
         b = a + i; // Escritura concurrente en 'b'
